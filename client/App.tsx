@@ -9,6 +9,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Placeholder from "./pages/Placeholder";
+import Dashboard from "./pages/Dashboard";
+import RoleDashboard from "./pages/RoleDashboard";
+import DashboardSection from "./pages/DashboardSection";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,8 +22,6 @@ const placeholders = [
   ["investors", "For investors"],
   ["how-it-works", "How it works"],
   ["compliance", "Compliance"],
-  ["sign-in", "Sign in"],
-  ["sign-up", "Get started"],
 ];
 
 const App = () => (
@@ -39,6 +40,12 @@ const App = () => (
                 element={<Placeholder title={title} />}
               />
             ))}
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/:role" element={<RoleDashboard />} />
+            <Route
+              path="/dashboard/:role/:section"
+              element={<DashboardSection />}
+            />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Route>

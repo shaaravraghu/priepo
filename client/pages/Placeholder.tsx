@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
 import { Construction } from "lucide-react";
 
-export default function Placeholder({ title }: { title: string }) {
+interface PlaceholderProps {
+  title: string;
+  backTo?: string;
+  backLabel?: string;
+}
+
+export default function Placeholder({
+  title,
+  backTo = "/",
+  backLabel = "Back to home",
+}: PlaceholderProps) {
   return (
     <section className="mx-auto flex max-w-2xl flex-col items-center px-4 py-24 text-center">
       <span className="grid h-14 w-14 place-items-center rounded-2xl bg-accent text-brand">
@@ -13,10 +23,10 @@ export default function Placeholder({ title }: { title: string }) {
         contents.
       </p>
       <Link
-        to="/"
+        to={backTo}
         className="mt-8 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white"
       >
-        Back to home
+        {backLabel}
       </Link>
     </section>
   );

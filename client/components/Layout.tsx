@@ -60,13 +60,13 @@ export default function Layout() {
           </nav>
           <div className="hidden items-center gap-2 lg:flex">
             <Link
-              to="/sign-in"
+              to="/dashboard"
               className="rounded-md px-3 py-2 text-sm font-semibold text-ink hover:bg-muted"
             >
               Sign in
             </Link>
             <Link
-              to="/sign-up"
+              to="/dashboard"
               className="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               Get started
@@ -83,7 +83,7 @@ export default function Layout() {
         </div>
         {open && (
           <div className="border-t bg-background px-4 pb-4 lg:hidden">
-            {[...nav, { to: "/sign-in", label: "Sign in" }, { to: "/sign-up", label: "Get started" }].map((n) => (
+            {[...nav, { to: "/dashboard", label: "Dashboards" }].map((n) => (
               <Link
                 key={n.to}
                 to={n.to}
