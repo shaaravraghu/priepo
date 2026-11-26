@@ -1,7 +1,8 @@
 # priepo
 
 priepo (pre-IPO) is a marketplace where early-stage startups list share lots and everyday people buy them to fund the company.
-refer to product docs/ER_DIAGRAM.MD
+
+## refer to product docs/ER_DIAGRAM.MD (DBMS structure) and Pitch_Deck for the product concept.
 
 > **SIMULATION - NOT REAL SECURITIES.** priepo is in sandbox mode. Money is simulated. Nothing here is investment advice or a promise of returns.
 
